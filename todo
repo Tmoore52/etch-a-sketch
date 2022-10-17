@@ -1,5 +1,8 @@
 #PSEUDOCODE
 
+create divs with JS for the grid, 16x16
+    need to create a loop to get all of the divs created with the correct style. set style before possibly?
+    
 
 
 TODO
