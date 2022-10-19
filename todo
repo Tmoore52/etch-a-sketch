@@ -2,8 +2,15 @@
 
 create divs with JS for the grid, 16x16
     need to create a loop to get all of the divs created with the correct style. set style before possibly?
-    
+Create button to change squares per side
+    accept prompt input into the col value. Change row value to that
+    Make col value into the grid template column value as well
+        change style based on ${input}
+    Make number have to be between 1-100
 
 
 TODO
-☐ Create grid with JS and divs
+✔ Create grid with JS and divs @done(22-10-18 20:44)
+☐ Make button to change squares per side
+☐ Fix button accepting bad input to loop if input is bad
+
