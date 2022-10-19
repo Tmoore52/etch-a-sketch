@@ -23,7 +23,7 @@ function randomColor() {
   return color;
 }
 
-createGrid(col, row);
+createGrid(16, 16);
 
 function colorChange(e) {
   console.log("EVENT TYPE:" + e.type);
@@ -36,7 +36,11 @@ function squareChange() {
     alert("Number too high or low. Please try again and enter a number between 1 and 100.");
   }
   row = col;
+  while (grid.firstChild){
+    grid.removeChild(grid.firstChild);
+  }
   console.log(col);
   console.log(row);
+  createGrid(col, row);
 };
 

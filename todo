@@ -12,5 +12,5 @@ Create button to change squares per side
 TODO
 ✔ Create grid with JS and divs @done(22-10-18 20:44)
 ☐ Make button to change squares per side
-☐ Fix button accepting bad input to loop if input is bad
+✔ Fix button accepting bad input to loop if input is bad @done(22-10-19 16:37)
 
