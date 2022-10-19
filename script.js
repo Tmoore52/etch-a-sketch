@@ -51,9 +51,9 @@ function squareChange() {
   createGrid(col, row);
 }
 
-function clearGrid() {
-  console.log("Test")
-  gridItem.forEach(item => {
-    item.style.backgroundColor = "white"
-  })
-}
+// function clearGrid() {
+//   console.log("Test")
+//   gridItem.forEach(item => {
+//     item.style.backgroundColor = "white"
+//   })
+// }
