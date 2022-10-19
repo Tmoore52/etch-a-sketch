@@ -1,17 +1,21 @@
-let grid = document.querySelector("#grid-container");
+let grid = document.getElementById("grid-container");
 let button = document.querySelector(".button");
-col = 16;
-row = col;
+let clear = document.querySelector(".clear");
+let gridItem = document.querySelectorAll(".grid-item")
+let col
+let row
+
 // creates grid based on col and row multiplied by each other
 
 function createGrid(col, row) {
   col = col * row;
   for (i = 0; i < col; i++) {
-    gridItem = document.createElement("div");
-    grid.appendChild(gridItem).className = `grid-item ${i + 1}`;
-    gridItem.addEventListener("mouseenter", colorChange);
+    div = document.createElement("div");
+    grid.appendChild(div).className = `grid-item`;
+    div.addEventListener("mouseenter", colorChange);
   }
   button.addEventListener("click", squareChange);
+  clear.addEventListener("click", clearGrid )
 }
 
 function randomColor() {
@@ -33,14 +37,23 @@ function colorChange(e) {
 function squareChange() {
   let col = prompt("Enter how squares per side you'd like up to 100");
   if (col > 100 || col < 1) {
-    alert("Number too high or low. Please try again and enter a number between 1 and 100.");
+    return alert(
+      "Number too high or low. Please try again and enter a number between 1 and 100."
+    );
   }
   row = col;
-  while (grid.firstChild){
+  while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
   }
+  grid.style = "grid-template-columns: repeat(" + col + ", 1fr);";
   console.log(col);
   console.log(row);
   createGrid(col, row);
-};
+}
 
+function clearGrid() {
+  console.log("Test")
+  gridItem.forEach(item => {
+    item.style.backgroundColor = "white"
+  })
+}
